@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #6a98f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+:root {
+  --shadow:0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --ring-offset-shadow:0 0 #0000;
+  --ring-shadow:0 0 #0000;
+}
+
+.card_open {
+  animation-duration: 2s;
+  animation-name: card_open;
+}
+
+@keyframes card_open {
+  from {
+      height: 1%;
+      box-shadow: var(--shadow);
+  }
+
+  to {
+      height: 100%;
+      box-shadow: var(--ring-offset-shadow,0 0 #0000),var(--ring-shadow,0 0 #0000),var(--shadow);
+  }
+}
