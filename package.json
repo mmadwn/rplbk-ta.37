@@ -19,7 +19,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "api": "npx json-server db.json --port 3001"
   },
   "eslintConfig": {
     "extends": [

@@ -23,10 +23,12 @@ export default class Main extends Component {
 
   info(data) {
     Modal.info({
-      title: "This is a notification message",
+      title: "Product Detail",
       content: (
         <div>
+          <img className="small" src={data.image} alt={data.name} />
           <p>{data.name}</p>
+          <p>{data.detail}</p>
         </div>
       ),
       onOk() {},
@@ -49,7 +51,7 @@ export default class Main extends Component {
             <h3>{product.name}</h3>
             <div>Rp{product.price}</div>
             <div>
-              <button onClick={() => this.info(product) }>Info</button>
+              <button onClick={() => this.info(product) }>Detail</button>
               <button onClick={() => onAdd(product)}>Add To Cart</button>
             </div>
           </div>
